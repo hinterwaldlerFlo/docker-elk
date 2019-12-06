@@ -20,6 +20,7 @@ services:
       context: logstash/
     volumes:
       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+      - C:/TEMP/sensordatatable_boxberg_20191018:/usr/share/logstash/sensordatatable_boxberg_20191018:ro
       - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
     ports:
       - "5000:5000"
